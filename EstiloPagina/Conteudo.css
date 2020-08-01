@@ -1,0 +1,58 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    background: url(../Imagens/fundo.png) fixed center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar-brand {
+    font-family: 'Lobster', cursive;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+li {
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+i {
+    font-size: 20px;
+    color: black;
+}
+
+p {
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+}
+
+h6 {
+    color: white;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 19px;
+    background-color: black;
+}
+
+   
+.saud {
+   
+    font-family: 'Lobster', cursive;
+    font-size: 27px;
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: black;
+    opacity: .8;
+}
+
+.sub{
+
+    background-color:white;
+    color:black;
+    opacity:.8;
+
+}

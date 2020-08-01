@@ -1,0 +1,214 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ListarComandas.aspx.cs" Inherits="Paginas_Garçom_Comandas_Cadastrar" %>
+
+<%@ Register Src="~/Cabecalho/CabecalhoGarcom.ascx" TagPrefix="uc1" TagName="CabecalhoGarcom" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title></title>
+
+    <link href="../../../Content/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="../../../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../../Scripts/DataTables/dataTables.bootstrap.js"></script>
+    <link href="../../../font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../../Scripts/DataTables/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="../../../Scripts/DataTables/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="../../../EstiloPagina/Conteudo.css" rel="stylesheet" />
+
+
+</head>
+
+
+<body>
+
+    <uc1:CabecalhoGarcom runat="server" ID="CabecalhoGarcom" />
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <form id="form1" runat="server">
+
+        <div class="container" style="background-color: black; opacity: .9; border-radius: 10px; padding: 10px 10px 10px 10px">
+
+            <h2 class="text-center" style="color: whitesmoke; font-family: 'Lobster', cursive;"> Comandas </h2>
+
+            <br />
+
+            <br />
+
+            <br />
+
+            <div class="text-center col-xs-12">
+
+                <asp:HyperLink ID="HyperLink1" CssClass="btn btn-danger" NavigateUrl="~/Paginas/Garçom/Comandas/Cadastrar.aspx" runat="server"> 
+                    
+                     <span class="glyphicon glyphicon-plus"></span>
+                    
+                    <strong> Cadastrar Comanda </strong>
+
+
+                </asp:HyperLink>
+
+            </div>
+
+            <br />
+            <br />
+            <br />
+
+            <div class="col-xs-12">
+
+
+                <!-- gridview -->
+
+                <div class="table-responsive">
+
+                <asp:GridView ID="grdComandas" runat="server" Width="100%" CssClass="tabela table table-striped table-bordered danger" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnRowCommand="grdComandas_RowCommand">
+                    <AlternatingRowStyle BackColor="#CCCCCC" />
+                    <Columns>
+
+                        <asp:BoundField DataField="mesas_descricao" HeaderText="Mesa">
+                            <HeaderStyle CssClass="text-center h4" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="com_datahora" HeaderText="Data / Hora">
+                            <HeaderStyle CssClass="text-center h4" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="com_total" HeaderText="Preço Total R$" DataFormatString="{0:C}">
+                            <HeaderStyle CssClass=" text-center h4" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="com_avaliacao" HeaderText="Avaliação">
+
+                            <HeaderStyle CssClass="text-center h4" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:BoundField>
+
+                        <asp:BoundField DataField="com_status" HeaderText="Status">
+                            <HeaderStyle CssClass="text-center h4" VerticalAlign="Middle" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                        </asp:BoundField>
+
+                        <asp:TemplateField HeaderText="Ação">
+                            <ItemTemplate>
+
+
+                                <!-- Codigo para alterar -->
+
+                                <asp:LinkButton ID="lbAlterar" CssClass="btn btn-primary" runat="server" CommandName="Alterar"
+                                    CommandArgument='<%# Bind("com_id")%>'>
+
+                                    <span class="glyphicon glyphicon-edit">  </span>
+                                                          
+                                        <strong> Alterar </strong>
+
+                                </asp:LinkButton>
+
+                            </ItemTemplate>
+
+                            <HeaderStyle CssClass="text-center h4" />
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+
+
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="Produto / Espeto">
+
+                            <ItemTemplate>
+
+                                <asp:LinkButton ID="ola" CommandName="Cadastrar" CommandArgument='<%# Bind("com_id")%>' CssClass="btn btn-warning text-center" runat="server">
+
+                               <span class="glyphicon glyphicon-star">  </span>
+                                                          
+                             <strong> Adicionar Item </strong>
+
+                                </asp:LinkButton>
+
+                            </ItemTemplate>
+
+                            <HeaderStyle CssClass="text-center h4" />
+                            <ItemStyle CssClass="text-center h4" />
+
+                        </asp:TemplateField>
+
+                    </Columns>
+
+                    <FooterStyle BackColor="#CCCCCC" />
+                    <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                    <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                    <SortedAscendingHeaderStyle BackColor="Gray" />
+                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                    <SortedDescendingHeaderStyle BackColor="#383838" />
+
+                </asp:GridView>
+
+                    </div>
+            </div>
+        </div>
+
+
+    </form>
+
+    <br />
+
+    <!-- scripts -->
+
+    <script src="../../../Scripts/jquery-3.2.1.min.js"></script>
+    <script src="../../../Scripts/bootstrap.min.js"></script>
+    <script src="../../../Scripts/DataTables/jquery.dataTables.min.js"></script>
+    <script src="../../../Scripts/DataTables/Datatable/dataTables.buttons.min.js"></script>
+    <script src="../../../Scripts/DataTables/Datatable/buttons.flash.min.js"></script>
+    <script src="../../../Scripts/DataTables/Datatable/jszip.min.js"></script>
+    <script src="../../../Scripts/DataTables/Datatable/pdfmake.min.js"></script>
+    <script src="../../../Scripts/DataTables/Datatable/vfs_fonts.js"></script>
+    <script src="../../../Scripts/DataTables/Datatable/buttons.html5.min.js"></script>
+    <script src="../../../Scripts/DataTables/Datatable/buttons.print.min.js"></script>
+    <script src="../../../Scripts/DataTables/Datatable/buttons.colVis.min.js"></script>
+    <script src="../../../Scripts/bootstrap-select.min.js"></script>
+
+    <script>
+
+
+        $('.tabela').DataTable({
+            paging: true,
+            searching: true,
+            ordering: true,
+            stateSave: true,
+
+
+            language: {
+                sProcessing: "A processar...",
+                sLengthMenu: "<p class='sub'>Mostrar _MENU_ registos</p>",
+                sZeroRecords: "Não foram encontrados resultados",
+                sInfo: "<p> Mostrando de _START_ até _END_ de _TOTAL_ Comandas </p>",
+                sInfoEmpty: "<p>Mostrando de 0 até 0 de 0 Comandas</p>",
+                sInfoFiltered: "<p>(filtrado de _MAX_ registos no total)</p>",
+                sInfoPostFix: "",
+                sSearch: "<h6>Procurar<h6>",
+                sUrl: "",
+                oPaginate: {
+                    sFirst: "Primeiro",
+                    sPrevious: "<p>Anterior</p>",
+                    sNext: "<p>Seguinte</p>",
+                    sLast: "Último",
+                },
+                buttons: {
+                    colvis: 'Selecione colunas',
+                    copyTitle: 'Copiar',
+                    copySuccess: { 1: "Copiado 1 linha para área de transferência", _: "Copiado %d linhas para área de transferência" }
+                }
+            }
+        });
+
+    </script>
+
+</body>
+</html>

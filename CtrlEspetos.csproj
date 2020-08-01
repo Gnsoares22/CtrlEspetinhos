@@ -1,0 +1,696 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26FCEB1D-5E0B-4CEA-88B6-7C71DC49AB02}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CtrlEspetos</RootNamespace>
+    <AssemblyName>CtrlEspetos</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44308</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="Cabecalho\CabecalhoADM.ascx" />
+    <Content Include="Cabecalho\CabecalhoGarcom.ascx" />
+    <Content Include="Content\bootstrap-select.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\sweetalert2.min.css.css" />
+    <Content Include="EstiloPagina\Conteudo.css" />
+    <Content Include="EstiloPagina\estilo.css" />
+    <Content Include="EstiloPagina\Login.css" />
+    <Content Include="font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Imagens\Bebidas.png" />
+    <Content Include="Imagens\esp.png" />
+    <Content Include="Imagens\espeto.png" />
+    <Content Include="Imagens\fundo.jpg" />
+    <Content Include="Imagens\fundo.png" />
+    <Content Include="Imagens\giphy.gif" />
+    <Content Include="obj\Debug\CtrlEspetos.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\CtrlEspetos.dll" />
+    <Content Include="obj\Debug\CtrlEspetos.pdb" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap-theme.css" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap-theme.min.css" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap.css" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap.min.css" />
+    <Content Include="packages\bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="packages\bootstrap.3.3.7\content\Scripts\bootstrap.js" />
+    <Content Include="packages\bootstrap.3.3.7\content\Scripts\bootstrap.min.js" />
+    <Content Include=".editorconfig" />
+    <None Include="packages\jQuery.3.2.1\Content\Scripts\jquery-3.2.1-vsdoc.js" />
+    <Content Include="packages\jQuery.3.2.1\Content\Scripts\jquery-3.2.1.js" />
+    <Content Include="packages\jQuery.3.2.1\Content\Scripts\jquery-3.2.1.min.js" />
+    <Content Include="packages\jQuery.3.2.1\Content\Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="packages\jQuery.3.2.1\Content\Scripts\jquery-3.2.1.slim.min.js" />
+    <None Include="packages\jQuery.3.2.1\Tools\jquery-3.2.1.intellisense.js" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\VBCSCompiler.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Console.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.Compression.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.Pipes.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.AccessControl.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Claims.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Principal.Windows.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Text.Encoding.CodePages.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.ValueTuple.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Xml.ReaderWriter.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Xml.XmlDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Xml.XPath.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Xml.XPath.XDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\VBCSCompiler.exe" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\csc.exe" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\csi.exe" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\vbc.exe" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\VBCSCompiler.exe" />
+    <Content Include="App_Code\Paginas\AcessoNegado\AcessoNegado.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\Adm.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\Alterar.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\Comandas\Grafico.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\Comandas\ListarComandasADM.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\Desperdicíos\GraficoDesperdicio.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\Desperdicíos\ListaDesperdicio.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\Espetos\Alterar.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\Espetos\CadastrarEspeto.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\Espetos\ListarEspetos.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\ListarProdutos.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\MateriaPrima\Alterar.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\MateriaPrima\CadastrarMateriaPrima.aspx" />
+    <Content Include="App_Code\Paginas\Administrador\MateriaPrima\ListarMateriaPrima.aspx" />
+    <Content Include="App_Code\Paginas\Garçom\Comandas\AdicionarItem.aspx" />
+    <Content Include="App_Code\Paginas\Garçom\Comandas\Alterar.aspx" />
+    <Content Include="App_Code\Paginas\Garçom\Comandas\Cadastrar.aspx" />
+    <Content Include="App_Code\Paginas\Garçom\Comandas\ListarComandas.aspx" />
+    <Content Include="App_Code\Paginas\Garçom\Espeto\ListaEspetos.aspx" />
+    <Content Include="App_Code\Paginas\Garçom\Garçom.aspx" />
+    <Content Include="App_Code\Paginas\LogarSistema.aspx" />
+    <Content Include="Scripts\bootstrap-select.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\buttons.dataTables.min.css" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap.css" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\Datatable\buttons.colVis.min.js" />
+    <Content Include="Scripts\DataTables\Datatable\buttons.flash.min.js" />
+    <Content Include="Scripts\DataTables\Datatable\buttons.html5.min.js" />
+    <Content Include="Scripts\DataTables\Datatable\buttons.print.min.js" />
+    <Content Include="Scripts\DataTables\Datatable\dataTables.buttons.min.js" />
+    <Content Include="Scripts\DataTables\Datatable\jszip.min.js" />
+    <Content Include="Scripts\DataTables\Datatable\pdfmake.min.js" />
+    <Content Include="Scripts\DataTables\Datatable\vfs_fonts.js" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\css\dataTables.autoFill.css" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\css\dataTables.autoFill.min.css" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\examples\columns.html" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\examples\complete-callback.html" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\examples\fill-both.html" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\examples\fill-horizontal.html" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\examples\index.html" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\examples\scrolling.html" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\examples\simple.html" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\examples\step-callback.html" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\images\filler.png" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\js\dataTables.autoFill.js" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\js\dataTables.autoFill.min.js" />
+    <Content Include="Scripts\DataTables\extensions\AutoFill\Readme.txt" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\css\dataTables.colReorder.css" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\css\dataTables.colReorder.min.css" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\alt_insert.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\colvis.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\col_filter.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\fixedcolumns.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\fixedheader.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\index.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\jqueryui.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\new_init.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\predefined.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\realtime.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\reset.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\scrolling.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\server_side.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\simple.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\examples\state_save.html" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\images\insert.png" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\js\dataTables.colReorder.js" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\js\dataTables.colReorder.min.js" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\License.txt" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\css\dataTables.colVis.css" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\css\dataTables.colVis.min.css" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\button_order.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\exclude_columns.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\group_columns.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\index.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\jqueryui.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\mouseover.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\new_init.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\restore.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\simple.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\text.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\title_callback.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\two_tables.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\examples\two_tables_identical.html" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\js\dataTables.colVis.min.js" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\License.txt" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\css\dataTables.fixedColumns.css" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\css\dataTables.fixedColumns.min.css" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\bootstrap.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\colvis.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\col_filter.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\css_size.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\index.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\index_column.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\left_right_columns.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\right_column.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\rowspan.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\server-side-processing.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\simple.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\size_fixed.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\size_fluid.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\examples\two_columns.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\js\dataTables.fixedColumns.js" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\js\dataTables.fixedColumns.min.js" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\License.txt" />
+    <Content Include="Scripts\DataTables\extensions\FixedHeader\css\dataTables.fixedHeader.css" />
+    <Content Include="Scripts\DataTables\extensions\FixedHeader\css\dataTables.fixedHeader.min.css" />
+    <Content Include="Scripts\DataTables\extensions\FixedHeader\examples\header_footer.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedHeader\examples\index.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedHeader\examples\simple.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedHeader\examples\top_left_right.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedHeader\examples\two_tables.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedHeader\examples\zIndexes.html" />
+    <Content Include="Scripts\DataTables\extensions\FixedHeader\js\dataTables.fixedHeader.js" />
+    <Content Include="Scripts\DataTables\extensions\FixedHeader\js\dataTables.fixedHeader.min.js" />
+    <Content Include="Scripts\DataTables\extensions\FixedHeader\Readme.txt" />
+    <Content Include="Scripts\DataTables\extensions\KeyTable\css\dataTables.keyTable.css" />
+    <Content Include="Scripts\DataTables\extensions\KeyTable\css\dataTables.keyTable.min.css" />
+    <Content Include="Scripts\DataTables\extensions\KeyTable\examples\events.html" />
+    <Content Include="Scripts\DataTables\extensions\KeyTable\examples\html.html" />
+    <Content Include="Scripts\DataTables\extensions\KeyTable\examples\index.html" />
+    <Content Include="Scripts\DataTables\extensions\KeyTable\examples\scrolling.html" />
+    <Content Include="Scripts\DataTables\extensions\KeyTable\examples\simple.html" />
+    <Content Include="Scripts\DataTables\extensions\KeyTable\js\dataTables.keyTable.js" />
+    <Content Include="Scripts\DataTables\extensions\KeyTable\js\dataTables.keyTable.min.js" />
+    <Content Include="Scripts\DataTables\extensions\KeyTable\Readme.txt" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\child-rows\column-control.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\child-rows\custom-renderer.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\child-rows\disable-child-rows.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\child-rows\index.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\child-rows\right-column.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\child-rows\whole-row-control.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\display-control\auto.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\display-control\classes.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\display-control\complexHeader.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\display-control\fixedHeader.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\display-control\index.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\display-control\init-classes.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\index.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\initialisation\ajax.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\initialisation\className.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\initialisation\default.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\initialisation\index.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\initialisation\new.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\initialisation\option.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\styling\bootstrap.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\styling\compact.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\styling\foundation.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\styling\index.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\examples\styling\scrolling.html" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\js\dataTables.responsive.js" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\License.txt" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\css\dataTables.scroller.css" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\css\dataTables.scroller.min.css" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\examples\api_scrolling.html" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\examples\data\2500.txt" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\examples\data\ssp.php" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\examples\index.html" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\examples\large_js_source.html" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\examples\server-side_processing.html" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\examples\simple.html" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\examples\state_saving.html" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\images\loading-background.png" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\js\dataTables.scroller.js" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\js\dataTables.scroller.min.js" />
+    <Content Include="Scripts\DataTables\extensions\Scroller\Readme.txt" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\css\dataTables.tableTools.css" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\css\dataTables.tableTools.min.css" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\ajax.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\alter_buttons.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\bootstrap.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\button_text.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\collection.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\defaults.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\index.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\jqueryui.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\multiple_tables.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\multi_instance.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\new_init.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\pdf_message.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\plug-in.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\select_column.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\select_multi.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\select_os.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\select_single.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\simple.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\examples\swf_path.html" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\collection.png" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\collection_hover.png" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\copy.png" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\copy_hover.png" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\csv.png" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\csv_hover.png" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\pdf.png" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\pdf_hover.png" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\print.png" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\print_hover.png" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\xls.png" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\xls_hover.png" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\js\dataTables.tableTools.min.js" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Scripts\DataTables\images\sort_asc.png" />
+    <Content Include="Scripts\DataTables\images\sort_asc_disabled.png" />
+    <Content Include="Scripts\DataTables\images\sort_both.png" />
+    <Content Include="Scripts\DataTables\images\sort_desc.png" />
+    <Content Include="Scripts\DataTables\images\sort_desc_disabled.png" />
+    <Content Include="Scripts\DataTables\jquery.dataTables.css" />
+    <Content Include="Scripts\DataTables\jquery.dataTables.js" />
+    <Content Include="Scripts\DataTables\jquery.dataTables.min.css" />
+    <Content Include="Scripts\DataTables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\DataTables\jquery.dataTables_themeroller.css" />
+    <Content Include="Scripts\exporting.js" />
+    <Content Include="Scripts\highcharts.js" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\jquery.mask.min.js" />
+    <Content Include="Scripts\sweetalert2.min.js.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Classes\Comanda.cs" />
+    <Content Include="App_Code\Classes\Compras.cs" />
+    <Content Include="App_Code\Classes\Desperdicio.cs" />
+    <Content Include="App_Code\Classes\Espetos.cs" />
+    <Content Include="App_Code\Classes\Mesa.cs" />
+    <Content Include="App_Code\Classes\Pessoa.cs" />
+    <Content Include="App_Code\Classes\Produto.cs" />
+    <Content Include="App_Code\Mapped.cs" />
+    <Content Include="App_Code\Persistencia\ComandaBD.cs" />
+    <Content Include="App_Code\Persistencia\ComprasBD.cs" />
+    <Content Include="App_Code\Persistencia\DesperdicioBD.cs" />
+    <Content Include="App_Code\Persistencia\EspetoBD.cs" />
+    <Content Include="App_Code\Persistencia\MesaBD.cs" />
+    <Content Include="App_Code\Persistencia\PessoaBD.cs" />
+    <Content Include="App_Code\Persistencia\ProdutoBD.cs" />
+    <Compile Include="Cabecalho\CabecalhoADM.ascx.cs">
+      <DependentUpon>CabecalhoADM.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cabecalho\CabecalhoGarcom.ascx.cs">
+      <DependentUpon>CabecalhoGarcom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\AcessoNegado\AcessoNegado.aspx.cs">
+      <DependentUpon>AcessoNegado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\Adm.aspx.cs">
+      <DependentUpon>Adm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\Alterar.aspx.cs">
+      <DependentUpon>Alterar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\Comandas\Grafico.aspx.cs">
+      <DependentUpon>Grafico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\Comandas\ListarComandasADM.aspx.cs">
+      <DependentUpon>ListarComandasADM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\Desperdicíos\GraficoDesperdicio.aspx.cs">
+      <DependentUpon>GraficoDesperdicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\Desperdicíos\ListaDesperdicio.aspx.cs">
+      <DependentUpon>ListaDesperdicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\Espetos\Alterar.aspx.cs">
+      <DependentUpon>Alterar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\Espetos\CadastrarEspeto.aspx.cs">
+      <DependentUpon>CadastrarEspeto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\Espetos\ListarEspetos.aspx.cs">
+      <DependentUpon>ListarEspetos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\ListarProdutos.aspx.cs">
+      <DependentUpon>ListarProdutos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\MateriaPrima\Alterar.aspx.cs">
+      <DependentUpon>Alterar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\MateriaPrima\CadastrarMateriaPrima.aspx.cs">
+      <DependentUpon>CadastrarMateriaPrima.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Administrador\MateriaPrima\ListarMateriaPrima.aspx.cs">
+      <DependentUpon>ListarMateriaPrima.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Garçom\Comandas\AdicionarItem.aspx.cs">
+      <DependentUpon>AdicionarItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Garçom\Comandas\Alterar.aspx.cs">
+      <DependentUpon>Alterar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Garçom\Comandas\Cadastrar.aspx.cs">
+      <DependentUpon>Cadastrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Garçom\Comandas\ListarComandas.aspx.cs">
+      <DependentUpon>ListarComandas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Garçom\Espeto\ListaEspetos.aspx.cs">
+      <DependentUpon>ListaEspetos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\Garçom\Garçom.aspx.cs">
+      <DependentUpon>Garçom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Paginas\LogarSistema.aspx.cs">
+      <DependentUpon>LogarSistema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="font-awesome-4.7.0\less\animated.less" />
+    <Content Include="font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="font-awesome-4.7.0\less\core.less" />
+    <Content Include="font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="font-awesome-4.7.0\less\icons.less" />
+    <Content Include="font-awesome-4.7.0\less\larger.less" />
+    <Content Include="font-awesome-4.7.0\less\list.less" />
+    <Content Include="font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="font-awesome-4.7.0\less\path.less" />
+    <Content Include="font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="font-awesome-4.7.0\less\variables.less" />
+    <Content Include="font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="obj\Debug\CtrlEspetos.csproj.CopyComplete" />
+    <Content Include="obj\Debug\CtrlEspetos.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\CtrlEspetos.csprojAssemblyReference.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Release\CtrlEspetos.csproj.CoreCompileInputs.cache" />
+    <None Include="packages.config" />
+    <Content Include="packages\bootstrap.3.3.7\.signature.p7s" />
+    <Content Include="packages\bootstrap.3.3.7\bootstrap.3.3.7.nupkg" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap-theme.css.map" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap-theme.min.css.map" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap.css.map" />
+    <Content Include="packages\bootstrap.3.3.7\content\Content\bootstrap.min.css.map" />
+    <Content Include="packages\bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages\bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="packages\bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="packages\bootstrap.3.3.7\content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="packages\jQuery.3.2.1\.signature.p7s" />
+    <Content Include="packages\jQuery.3.2.1\Content\Scripts\jquery-3.2.1.min.map" />
+    <Content Include="packages\jQuery.3.2.1\Content\Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="packages\jQuery.3.2.1\jQuery.3.2.1.nupkg" />
+    <Content Include="packages\jQuery.3.2.1\Tools\common.ps1" />
+    <Content Include="packages\jQuery.3.2.1\Tools\install.ps1" />
+    <Content Include="packages\jQuery.3.2.1\Tools\uninstall.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net45\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net45\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net45\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net45\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net46\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net46\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net46\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net46\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\net45\install.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\net45\uninstall.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csi.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.Managed.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\.signature.p7s" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\Microsoft.Net.Compilers.1.3.2.nupkg" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\ThirdPartyNotices.rtf" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\csc.exe.config" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\csc.rsp" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\csi.rsp" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\vbc.exe.config" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\vbc.rsp" />
+    <Content Include="packages\Microsoft.Net.Compilers.1.3.2\tools\VBCSCompiler.exe.config" />
+    <Content Include="Scripts\DataTables\extensions\ColReorder\Readme.md" />
+    <Content Include="Scripts\DataTables\extensions\ColVis\Readme.md" />
+    <Content Include="Scripts\DataTables\extensions\FixedColumns\Readme.md" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\css\dataTables.responsive.scss" />
+    <Content Include="Scripts\DataTables\extensions\Responsive\Readme.md" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\psd\collection.psd" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\psd\copy document.psd" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\psd\file_types.psd" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\images\psd\printer.psd" />
+    <Content Include="Scripts\DataTables\extensions\TableTools\Readme.md" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65327</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44308/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
